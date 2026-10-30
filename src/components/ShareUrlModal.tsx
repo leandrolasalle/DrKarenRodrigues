@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import { X, Copy, Check, Share2, MessageCircle, Globe, Sparkles } from 'lucide-react';
-import { getPublicSiteUrl, openExternalUrl } from '../models/legalData';
+import {
+  SITE_METADATA,
+  buildWhatsAppShareUrl,
+  getPublicSiteUrl,
+  openExternalUrl,
+} from '../models/legalData';
 import KarenRodriguesLogo from './KarenRodriguesLogo';
 
 interface ShareUrlModalProps {
@@ -24,36 +29,35 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
 
   const publicUrl = getPublicSiteUrl();
 
-  const handleCopy = () => {
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(publicUrl).then(() => {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2500);
-      });
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(publicUrl);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2500);
+    } catch {
+      window.prompt('Copie este link:', publicUrl);
     }
   };
 
   const handleWhatsAppShare = () => {
-    const message = encodeURIComponent(
-      `Olá! Confira o site oficial da Dra. Karen Rodrigues | Advocacia & Consultoria Jurídica (OAB/RJ 265.765):\n\n${publicUrl}`
-    );
-    openExternalUrl(`https://wa.me/?text=${message}`);
+    openExternalUrl(buildWhatsAppShareUrl(publicUrl, SITE_METADATA.whatsappShareMessage(publicUrl)));
   };
 
   const handleNativeShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: 'Dra. Karen Rodrigues | Advocacia & Consultoria Jurídica',
-          text: 'Advocacia com experiência em Direito de Família, Sucessões e Previdenciário.',
+          title: SITE_METADATA.title,
+          text: SITE_METADATA.description,
           url: publicUrl,
         });
+        return;
       } catch {
-        // User cancelled or share failed silently
+        // User cancelled or sharing is not available in this browser.
       }
-    } else {
-      handleCopy();
     }
+
+    await handleCopy();
   };
 
   return (
@@ -68,8 +72,8 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
         {/* Modal Header */}
         <div className="flex items-center justify-between border-b border-black/[0.06] pb-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#5B1422]/[0.06] text-[#5B1422]">
-              <Globe className="h-5 w-5 text-[#5B1422]" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#590907]/[0.06] text-[#590907]">
+              <Globe className="h-5 w-5 text-[#590907]" />
             </div>
             <div>
               <h3 className="font-cinzel text-lg font-medium text-[#18181B]">
@@ -93,19 +97,19 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
         {/* Social Card Preview (How it looks on WhatsApp & Instagram) */}
         <div className="space-y-2">
           <div className="flex items-center gap-1.5 text-xs font-semibold text-[#52525B]">
-            <Sparkles className="w-3.5 h-3.5 text-[#5B1422]" />
+            <Sparkles className="w-3.5 h-3.5 text-[#590907]" />
             <span>Prévia do Cartão ao Compartilhar no WhatsApp / Instagram:</span>
           </div>
 
           <div className="overflow-hidden rounded-xl border border-black/[0.06] bg-white shadow-[0_4px_25px_rgba(0,0,0,0.02)]">
             {/* Top visual banner of the social card */}
-            <div className="flex flex-col items-center justify-center border-b border-black/[0.05] bg-[#FAF8F5] p-5">
+            <div className="flex flex-col items-center justify-center border-b border-black/[0.05] bg-[#F6F3E8] p-5">
               <KarenRodriguesLogo variant="full" className="w-44 h-auto" />
             </div>
 
             {/* Social meta text preview */}
             <div className="space-y-1 bg-white p-4">
-              <div className="truncate font-mono text-[11px] font-semibold text-[#5B1422]">
+              <div className="truncate font-mono text-[11px] font-semibold text-[#590907]">
                 {publicUrl.replace(/^https?:\/\//, '')}
               </div>
               <div className="font-cinzel text-sm font-medium text-[#18181B]">
@@ -135,7 +139,7 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
             <button
               type="button"
               onClick={handleCopy}
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[#5B1422] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#6E1A2B] cursor-pointer"
+              className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[#590907] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#3E0605] cursor-pointer"
             >
               {copied ? (
                 <>
@@ -157,7 +161,7 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
           <button
             type="button"
             onClick={handleWhatsAppShare}
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#5B1422] px-4 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#6E1A2B] cursor-pointer"
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#590907] px-4 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#3E0605] cursor-pointer"
           >
             <MessageCircle className="w-4 h-4 text-white/80" />
             <span>Enviar no WhatsApp</span>
@@ -166,9 +170,9 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
           <button
             type="button"
             onClick={handleNativeShare}
-            className="flex w-full items-center justify-center gap-2 rounded-lg border border-black/[0.07] px-4 py-3 text-xs font-semibold text-[#52525B] transition-colors hover:bg-[#FAF8F5] cursor-pointer"
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-black/[0.07] px-4 py-3 text-xs font-semibold text-[#52525B] transition-colors hover:bg-[#F6F3E8] cursor-pointer"
           >
-            <Share2 className="w-4 h-4 text-[#5B1422]" />
+            <Share2 className="w-4 h-4 text-[#590907]" />
             <span>Compartilhar Link</span>
           </button>
         </div>
@@ -180,3 +184,4 @@ export default function ShareUrlModal({ isOpen, onClose }: ShareUrlModalProps) {
     </div>
   );
 }
+

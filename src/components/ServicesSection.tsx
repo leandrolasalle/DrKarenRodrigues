@@ -49,21 +49,21 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
             return (
               <article
                 key={service.id}
-                className="group flex min-h-[230px] flex-col justify-between border border-[#B88622]/20 bg-white p-6 shadow-[0_8px_28px_rgba(184,146,42,0.09)] transition-all duration-300 hover:-translate-y-1 hover:border-[#B88622]/45 hover:shadow-[0_16px_38px_rgba(184,146,42,0.2)] sm:p-7"
+                className="group flex min-h-[230px] flex-col justify-between border border-[#8B741F]/20 bg-white p-6 shadow-[0_8px_28px_rgba(184,146,42,0.09)] transition-all duration-300 hover:-translate-y-1 hover:border-[#8B741F]/45 hover:shadow-[0_16px_38px_rgba(184,146,42,0.2)] sm:p-7"
               >
                 <div>
                   <div className="mb-6 flex items-center justify-between pb-1">
                     <span className="font-cinzel text-sm text-[#A1A1AA]">
                       {String(index + 1).padStart(2, '0')}
                     </span>
-                    <span className="relative flex h-11 w-11 items-center justify-center rounded-full border border-[#B88622]/35 bg-gradient-to-br from-white via-[#FBF6E9] to-[#F3E8CC] shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_5px_14px_rgba(184,146,42,0.13)] after:absolute after:inset-[4px] after:rounded-full after:border after:border-[#B88622]/15">
-                      <IconComponent className="h-5 w-5 text-[#5B1422]" strokeWidth={1.6} />
+                    <span className="relative flex h-11 w-11 items-center justify-center rounded-full border border-[#8B741F]/35 bg-gradient-to-br from-white via-[#FBF6E9] to-[#F3E8CC] shadow-[inset_0_1px_0_rgba(255,255,255,0.95),0_5px_14px_rgba(184,146,42,0.13)] after:absolute after:inset-[4px] after:rounded-full after:border after:border-[#8B741F]/15">
+                      <IconComponent className="h-5 w-5 text-[#590907]" strokeWidth={1.6} />
                     </span>
                   </div>
                   <p className="mb-2 text-[9px] font-medium uppercase tracking-[0.16em] text-[#71717A]">
                     {service.tag}
                   </p>
-                  <h3 className="font-cinzel text-xl font-medium leading-snug text-[#18181B] transition-colors group-hover:text-[#5B1422]">
+                  <h3 className="font-cinzel text-xl font-medium leading-snug text-[#18181B] transition-colors group-hover:text-[#590907]">
                     {service.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-[#52525B]">
@@ -74,9 +74,9 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
                 <button
                   type="button"
                   onClick={() => onSelectService(service.title)}
-                  className="mt-6 inline-flex min-h-11 w-fit items-center gap-2 text-xs font-semibold text-[#5B1422] transition-colors hover:text-[#85263E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5B1422]"
+                  className="mt-6 inline-flex min-h-11 w-fit items-center gap-2 text-xs font-semibold text-[#590907] transition-colors hover:text-[#85263E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#590907]"
                 >
-                  <CalendarCheck className="h-4 w-4 text-[#5B1422]" />
+                  <CalendarCheck className="h-4 w-4 text-[#590907]" />
                   Conversar sobre este assunto
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                 </button>
@@ -88,3 +88,4 @@ export default function ServicesSection({ onSelectService }: ServicesSectionProp
     </section>
   );
 }
+

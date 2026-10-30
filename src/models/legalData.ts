@@ -192,7 +192,7 @@ export const JOURNEY_PILLARS: JourneyPillar[] = [
     icon: 'Scale',
     accentBg: 'bg-[#FAF5E6]',
     accentBorder: 'border-[#E6D5A7]',
-    iconColor: 'text-[#B88622]',
+    iconColor: 'text-[#8B741F]',
   },
   {
     id: 'agilidade',
@@ -206,6 +206,20 @@ export const JOURNEY_PILLARS: JourneyPillar[] = [
   },
 ];
 
+export const SITE_METADATA = {
+  name: 'Dra. Karen Rodrigues Advocacia',
+  title: 'Karen Rodrigues | Advocacia Estratégica & Consultoria Jurídica',
+  description:
+    'Advogada inscrita na OAB/RJ, com experiência em Direito de Família e Sucessões, Previdenciário, Trabalhista, Imobiliário e do Consumidor.',
+  legalDescription:
+    'Conheça a trajetória e a formação de Dra. Karen Rodrigues, advogada inscrita na OAB/RJ, com pós-graduação em Direito de Família e Sucessões e Direito Previdenciário.',
+  fallbackPublicUrl:
+    'https://ais-pre-52eaue4tcyndq325etrcct-89955689891.us-east1.run.app',
+  ogImagePath: '/images+15anos-removebg-preview.png',
+  whatsappShareMessage: (publicUrl: string) =>
+    `Olá! Confira o site oficial da Dra. Karen Rodrigues | Advocacia & Consultoria Jurídica (OAB/RJ 265.765):\n\n${publicUrl}`,
+};
+
 export const OFFICE_CONTACTS = {
   phone: '(21) 99791-9078',
   whatsappRaw: '5521997919078',
@@ -215,17 +229,47 @@ export const OFFICE_CONTACTS = {
   messagesPhoneRaw: '5521995690638',
   email: 'drakarenrodrigues.adv.42@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/karenrodrigues-34059979/',
-  publicUrl: 'https://ais-pre-52eaue4tcyndq325etrcct-89955689891.us-east1.run.app',
+  publicUrl: SITE_METADATA.fallbackPublicUrl,
 };
 
 export function getPublicSiteUrl(): string {
   if (typeof window !== 'undefined') {
     const { origin, pathname } = window.location;
     if (!origin.includes('ais-dev-') && !origin.includes('localhost')) {
-      return origin + pathname;
+      return `${origin}${pathname}`;
     }
   }
   return OFFICE_CONTACTS.publicUrl;
+}
+
+export function getPublicSiteImageUrl(): string {
+  return new URL(SITE_METADATA.ogImagePath, getPublicSiteUrl()).toString();
+}
+
+export function buildWhatsAppShareUrl(publicUrl: string, message?: string): string {
+  const text = message ?? SITE_METADATA.whatsappShareMessage(publicUrl);
+  return `https://wa.me/?text=${encodeURIComponent(text)}`;
+}
+
+export function syncSeoMetadata(): void {
+  if (typeof document === 'undefined') return;
+
+  const publicUrl = getPublicSiteUrl();
+  const imageUrl = getPublicSiteImageUrl();
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const ogUrl = document.querySelector('meta[property="og:url"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogDescription = document.querySelector('meta[property="og:description"]');
+  const ogImage = document.querySelector('meta[property="og:image"]');
+  const twitterImage = document.querySelector('meta[name="twitter:image"]');
+
+  canonical?.setAttribute('href', publicUrl);
+  ogUrl?.setAttribute('content', publicUrl);
+  ogTitle?.setAttribute('content', SITE_METADATA.title);
+  ogDescription?.setAttribute('content', SITE_METADATA.legalDescription);
+  ogImage?.setAttribute('content', imageUrl);
+  twitterImage?.setAttribute('content', imageUrl);
 }
 
 export function openExternalUrl(url: string): void {
@@ -238,3 +282,4 @@ export function openExternalUrl(url: string): void {
   anchor.click();
   document.body.removeChild(anchor);
 }
+

@@ -20,21 +20,21 @@ export default function AboutSection({ onOpenJourneyPage }: AboutSectionProps) {
               </p>
               <h2 className="max-w-[22ch] font-cinzel text-2xl font-medium leading-[1.25] tracking-tight text-[#18181B] text-balance sm:text-[1.7rem] lg:max-w-none lg:text-[1.9rem]">
                 &ldquo;Cada desafio desde os bancos da faculdade me preparou para{' '}
-                <span className="italic font-normal text-[#5B1422]">defender a sua história hoje.</span>&rdquo;
+                <span className="italic font-normal text-[#590907]">defender a sua história hoje.</span>&rdquo;
               </h2>
 
               <p className="text-sm leading-7 text-[#52525B]">
                 Conheça minha trajetória no Direito, iniciada em 2009, com experiência em escritórios, órgãos públicos e tribunais. Sou bacharela pela Universidade Estácio de Sá e pós-graduada em Direito de Família e Sucessões e Direito Previdenciário.
               </p>
 
-              <div className="font-serif text-xl italic text-[#5B1422] leading-none">
+              <div className="font-serif text-xl italic text-[#590907] leading-none">
                 Dra. Karen Rodrigues
               </div>
 
               <div className="grid w-full grid-cols-1 gap-x-5 sm:grid-cols-3">
                 <div className="flex items-center gap-3 border-t border-black/[0.06] py-3 text-left">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#B88622]/30 bg-[#FBF6E9] shadow-[0_3px_10px_rgba(184,146,42,0.1)]">
-                    <GraduationCap className="h-4 w-4 text-[#5B1422]" strokeWidth={1.6} />
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#8B741F]/30 bg-[#FBF6E9] shadow-[0_3px_10px_rgba(184,146,42,0.1)]">
+                    <GraduationCap className="h-4 w-4 text-[#590907]" strokeWidth={1.6} />
                   </span>
                   <div className="text-xs">
                     <div className="font-semibold text-[#27272A]">Bacharela em Direito</div>
@@ -43,8 +43,8 @@ export default function AboutSection({ onOpenJourneyPage }: AboutSectionProps) {
                 </div>
 
                 <div className="flex items-center gap-3 border-t border-black/[0.06] py-3 text-left">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#B88622]/30 bg-[#FBF6E9] shadow-[0_3px_10px_rgba(184,146,42,0.1)]">
-                    <Award className="h-4 w-4 text-[#5B1422]" strokeWidth={1.6} />
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#8B741F]/30 bg-[#FBF6E9] shadow-[0_3px_10px_rgba(184,146,42,0.1)]">
+                    <Award className="h-4 w-4 text-[#590907]" strokeWidth={1.6} />
                   </span>
                   <div className="text-xs">
                     <div className="font-semibold text-[#27272A]">Pós-graduada</div>
@@ -53,8 +53,8 @@ export default function AboutSection({ onOpenJourneyPage }: AboutSectionProps) {
                 </div>
 
                 <div className="flex items-center gap-3 border-t border-black/[0.06] py-3 text-left">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#B88622]/30 bg-[#FBF6E9] shadow-[0_3px_10px_rgba(184,146,42,0.1)]">
-                    <MapPin className="h-4 w-4 text-[#5B1422]" strokeWidth={1.6} />
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#8B741F]/30 bg-[#FBF6E9] shadow-[0_3px_10px_rgba(184,146,42,0.1)]">
+                    <MapPin className="h-4 w-4 text-[#590907]" strokeWidth={1.6} />
                   </span>
                   <div className="text-xs">
                     <div className="font-semibold text-[#27272A]">OAB/RJ 265.765</div>
@@ -67,7 +67,7 @@ export default function AboutSection({ onOpenJourneyPage }: AboutSectionProps) {
                 <button
                   type="button"
                   onClick={onOpenJourneyPage}
-                  className="inline-flex min-h-12 items-center gap-2.5 rounded-lg bg-[#5B1422] px-6 text-xs font-semibold text-white transition-colors hover:bg-[#6E1A2B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5B1422] sm:text-sm"
+                  className="inline-flex min-h-12 items-center gap-2.5 rounded-lg bg-[#590907] px-6 text-xs font-semibold text-white transition-colors hover:bg-[#3E0605] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#590907] sm:text-sm"
                 >
                   <Compass className="w-4 h-4 text-white/80" />
                   <span>Conheça minha trajetória</span>
@@ -80,3 +80,4 @@ export default function AboutSection({ onOpenJourneyPage }: AboutSectionProps) {
     </section>
   );
 }
+

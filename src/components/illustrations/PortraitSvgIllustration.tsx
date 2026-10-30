@@ -69,7 +69,7 @@ export default function PortraitSvgIllustration({
 
       {includeBackgroundDetails && (
         <g filter={`url(#bgBokeh-${uid})`}>
-          <rect x="500" y="60" width="90" height="470" fill="#FAF8F5" opacity="0.85" />
+          <rect x="500" y="60" width="90" height="470" fill="#F6F3E8" opacity="0.85" />
           <rect x="165" y="25" width="285" height="490" fill="#DDE3E6" fillOpacity="0.35" stroke="#22252A" strokeWidth="10" />
           <line x1="312" y1="25" x2="312" y2="515" stroke="#22252A" strokeWidth="4" opacity="0.5" />
           <rect x="0" y="0" width="165" height="540" fill={`url(#woodShelf-${uid})`} />
@@ -170,3 +170,4 @@ export default function PortraitSvgIllustration({
     </svg>
   );
 }
+

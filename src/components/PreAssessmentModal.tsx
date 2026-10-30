@@ -113,7 +113,7 @@ export default function PreAssessmentModal({
         {/* Header */}
         <div className="flex items-center justify-between border-b border-black/[0.06] pb-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#5B1422] text-white">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#590907] text-white">
               <CalendarCheck className="h-4 w-4" />
             </div>
             <div>
@@ -152,9 +152,9 @@ export default function PreAssessmentModal({
                 aria-current={active ? 'step' : undefined}
                 className={`rounded-lg border px-3 py-2 text-xs font-medium transition-colors cursor-pointer ${
                   active
-                      ? 'border-[#5B1422] bg-[#5B1422] text-white'
+                      ? 'border-[#590907] bg-[#590907] text-white'
                     : completed
-                      ? 'border-[#5B1422]/20 bg-[#5B1422]/[0.06] text-[#5B1422]'
+                      ? 'border-[#590907]/20 bg-[#590907]/[0.06] text-[#590907]'
                       : 'border-black/[0.07] bg-white text-[#71717A]'
                 }`}
               >
@@ -179,11 +179,11 @@ export default function PreAssessmentModal({
                     aria-pressed={clientType === 'Pessoa Física (Para mim / Família)'}
                     className={`flex items-center gap-3 rounded-lg border p-3.5 text-left transition-all cursor-pointer ${
                       clientType === 'Pessoa Física (Para mim / Família)'
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#5B1422]/[0.06] text-[#5B1422]">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#590907]/[0.06] text-[#590907]">
                       <User className="h-4 w-4" />
                     </div>
                     <div>
@@ -198,11 +198,11 @@ export default function PreAssessmentModal({
                     aria-pressed={clientType === 'Empresa / Negócio (PJ)'}
                     className={`flex items-center gap-3 rounded-lg border p-3.5 text-left transition-all cursor-pointer ${
                       clientType === 'Empresa / Negócio (PJ)'
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#5B1422]/[0.06] text-[#5B1422]">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#590907]/[0.06] text-[#590907]">
                       <Building2 className="h-4 w-4" />
                     </div>
                     <div>
@@ -226,8 +226,8 @@ export default function PreAssessmentModal({
                       aria-pressed={subject === area}
                       className={`flex items-center justify-between rounded-lg border px-3.5 py-2.5 text-left text-xs font-medium transition-all cursor-pointer ${
                         subject === area
-                          ? 'border-[#5B1422] bg-[#5B1422] font-semibold text-white shadow-[0_0_0_1px_rgba(184,146,42,0.7),0_7px_20px_rgba(184,146,42,0.24)]'
-                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                          ? 'border-[#590907] bg-[#590907] font-semibold text-white shadow-[0_0_0_1px_rgba(184,146,42,0.7),0_7px_20px_rgba(184,146,42,0.24)]'
+                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                       }`}
                     >
                       <span>{area}</span>
@@ -241,7 +241,7 @@ export default function PreAssessmentModal({
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#5B1422] px-6 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#6E1A2B] cursor-pointer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#590907] px-6 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#3E0605] cursor-pointer"
                 >
                   <span>Próximo Passo</span>
                   <ArrowRight className="w-4 h-4 text-white/80" />
@@ -272,12 +272,12 @@ export default function PreAssessmentModal({
                       aria-pressed={caseStage === stage}
                       className={`flex w-full items-center justify-between rounded-lg border px-4 py-2.5 text-left text-xs font-medium transition-all cursor-pointer ${
                         caseStage === stage
-                          ? 'border-[#B88622]/70 bg-[#FBF6E9] font-semibold text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                          ? 'border-[#8B741F]/70 bg-[#FBF6E9] font-semibold text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                       }`}
                     >
                       <span>{stage}</span>
-                      {caseStage === stage && <CheckCircle2 className="w-4 h-4 shrink-0 text-[#5B1422]" />}
+                      {caseStage === stage && <CheckCircle2 className="w-4 h-4 shrink-0 text-[#590907]" />}
                     </button>
                   ))}
                 </div>
@@ -294,11 +294,11 @@ export default function PreAssessmentModal({
                     aria-pressed={urgency.startsWith('Urgente')}
                     className={`flex w-full items-center gap-3 rounded-lg border p-3 text-left text-xs transition-all cursor-pointer ${
                       urgency.startsWith('Urgente')
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] font-semibold text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] font-semibold text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <AlertTriangle className="w-4 h-4 shrink-0 text-[#5B1422]" />
+                    <AlertTriangle className="w-4 h-4 shrink-0 text-[#590907]" />
                     <span>
                       <strong>Urgente:</strong> Recebi intimação, citação ou tenho prazo correndo
                     </span>
@@ -310,11 +310,11 @@ export default function PreAssessmentModal({
                     aria-pressed={urgency === 'Resolver nos próximos dias'}
                     className={`flex w-full items-center gap-3 rounded-lg border p-3 text-left text-xs transition-all cursor-pointer ${
                       urgency === 'Resolver nos próximos dias'
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] font-semibold text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] font-semibold text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <Clock className="w-4 h-4 shrink-0 text-[#5B1422]" />
+                    <Clock className="w-4 h-4 shrink-0 text-[#590907]" />
                     <span>
                       <strong>Quero iniciar logo:</strong> Busco contratar ou agendar nos próximos dias
                     </span>
@@ -326,11 +326,11 @@ export default function PreAssessmentModal({
                     aria-pressed={urgency === 'Apenas planejamento / dúvida inicial'}
                     className={`flex w-full items-center gap-3 rounded-lg border p-3 text-left text-xs transition-all cursor-pointer ${
                       urgency === 'Apenas planejamento / dúvida inicial'
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] font-semibold text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] font-semibold text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <HelpCircle className="w-4 h-4 shrink-0 text-[#5B1422]" />
+                    <HelpCircle className="w-4 h-4 shrink-0 text-[#590907]" />
                     <span>
                       <strong>Planejamento:</strong> Quero entender meus direitos e planejar com calma
                     </span>
@@ -356,11 +356,11 @@ export default function PreAssessmentModal({
                       aria-pressed={docsStatus === docOpt}
                       className={`flex items-center gap-2 rounded-lg border p-2.5 text-left text-xs font-medium transition-all cursor-pointer ${
                         docsStatus === docOpt
-                          ? 'border-[#B88622]/70 bg-[#FBF6E9] font-semibold text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                          ? 'border-[#8B741F]/70 bg-[#FBF6E9] font-semibold text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                       }`}
                     >
-                      <FileText className="h-3.5 w-3.5 shrink-0 text-[#5B1422]" />
+                      <FileText className="h-3.5 w-3.5 shrink-0 text-[#590907]" />
                       <span>{docOpt}</span>
                     </button>
                   ))}
@@ -371,7 +371,7 @@ export default function PreAssessmentModal({
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-black/[0.07] px-4 py-2.5 text-xs font-semibold text-[#52525B] transition-colors hover:bg-[#FAF8F5] hover:text-[#18181B] cursor-pointer"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-black/[0.07] px-4 py-2.5 text-xs font-semibold text-[#52525B] transition-colors hover:bg-[#F6F3E8] hover:text-[#18181B] cursor-pointer"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Voltar</span>
@@ -380,7 +380,7 @@ export default function PreAssessmentModal({
                 <button
                   type="button"
                   onClick={() => setStep(3)}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#5B1422] px-6 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#6E1A2B] cursor-pointer"
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[#590907] px-6 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#3E0605] cursor-pointer"
                 >
                   <span>Último Passo</span>
                   <ArrowRight className="w-4 h-4 text-white/80" />
@@ -394,10 +394,10 @@ export default function PreAssessmentModal({
             <div className="space-y-6 animate-fadeIn">
               <div className="flex items-center justify-between gap-2 border-y border-black/[0.06] py-3 text-xs">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="h-4 w-4 shrink-0 text-[#5B1422]" />
+                  <Sparkles className="h-4 w-4 shrink-0 text-[#590907]" />
                   <span className="font-semibold text-[#27272A]">{priorityBadge}</span>
                 </div>
-                <span className="truncate text-[11px] font-medium text-[#5B1422]">{subject}</span>
+                <span className="truncate text-[11px] font-medium text-[#590907]">{subject}</span>
               </div>
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -411,7 +411,7 @@ export default function PreAssessmentModal({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Como prefere ser chamada(o)?"
-                    className="w-full rounded-lg border border-black/[0.08] bg-white px-4 py-3 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#5B1422]/50"
+                    className="w-full rounded-lg border border-black/[0.08] bg-white px-4 py-3 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#590907]/50"
                   />
                 </div>
 
@@ -425,7 +425,7 @@ export default function PreAssessmentModal({
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="(DDD) 99999-9999"
-                    className="w-full rounded-lg border border-black/[0.08] bg-white px-4 py-3 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#5B1422]/50"
+                    className="w-full rounded-lg border border-black/[0.08] bg-white px-4 py-3 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#590907]/50"
                   />
                 </div>
               </div>
@@ -449,8 +449,8 @@ export default function PreAssessmentModal({
                       aria-pressed={format === fmt}
                       className={`rounded-lg border px-2 py-2 text-center transition-all cursor-pointer ${
                         format === fmt
-                          ? 'border-[#5B1422] bg-[#5B1422] font-semibold text-white shadow-[0_0_0_1px_rgba(184,146,42,0.7),0_7px_20px_rgba(184,146,42,0.24)]'
-                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                          ? 'border-[#590907] bg-[#590907] font-semibold text-white shadow-[0_0_0_1px_rgba(184,146,42,0.7),0_7px_20px_rgba(184,146,42,0.24)]'
+                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                       }`}
                     >
                       {fmt}
@@ -468,7 +468,7 @@ export default function PreAssessmentModal({
                   value={details}
                   onChange={(e) => setDetails(e.target.value)}
                   placeholder="Ex: Melhor horário para falar ou resumo em 1 frase..."
-                  className="w-full resize-none rounded-lg border border-black/[0.08] bg-white p-3 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#5B1422]/50"
+                  className="w-full resize-none rounded-lg border border-black/[0.08] bg-white p-3 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#590907]/50"
                 />
               </div>
 
@@ -476,7 +476,7 @@ export default function PreAssessmentModal({
                 <button
                   type="button"
                   onClick={() => setStep(2)}
-                  className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-black/[0.07] px-4 py-3 text-xs font-semibold text-[#52525B] transition-colors hover:bg-[#FAF8F5] cursor-pointer"
+                  className="inline-flex min-h-11 items-center gap-1.5 rounded-lg border border-black/[0.07] px-4 py-3 text-xs font-semibold text-[#52525B] transition-colors hover:bg-[#F6F3E8] cursor-pointer"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Voltar</span>
@@ -484,7 +484,7 @@ export default function PreAssessmentModal({
 
                 <button
                   type="submit"
-                  className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-[#5B1422] px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#6E1A2B] active:scale-[0.99] cursor-pointer"
+                  className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-[#590907] px-6 py-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#3E0605] active:scale-[0.99] cursor-pointer"
                 >
                   {submitted ? (
                     <>
@@ -510,3 +510,4 @@ export default function PreAssessmentModal({
     </div>
   );
 }
+

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { ActivePage } from '../models/site';
-import { getPublicSiteUrl } from '../models/legalData';
+import { syncSeoMetadata } from '../models/legalData';
 
 export function useSiteController() {
   const [currentPage, setCurrentPage] = useState<ActivePage>(() => {
@@ -19,9 +19,7 @@ export function useSiteController() {
   const [selectedSubject, setSelectedSubject] = useState<string | undefined>();
 
   useEffect(() => {
-    const activeUrl = getPublicSiteUrl();
-    document.querySelector('link[rel="canonical"]')?.setAttribute('href', activeUrl);
-    document.querySelector('meta[property="og:url"]')?.setAttribute('content', activeUrl);
+    syncSeoMetadata();
   }, []);
 
   useEffect(() => {

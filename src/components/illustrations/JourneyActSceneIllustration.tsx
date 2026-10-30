@@ -144,11 +144,11 @@ export default function JourneyActSceneIllustration({
           <polygon points="45,65 245,65 440,400 120,400" fill="url(#sunbeamAct2)" />
 
           <g transform="translate(395, 68)" opacity="0.45">
-            <circle cx="32" cy="32" r="28" fill="#FAF0E4" stroke="#B88622" strokeWidth="2" />
+            <circle cx="32" cy="32" r="28" fill="#FAF0E4" stroke="#8B741F" strokeWidth="2" />
             <line x1="32" y1="14" x2="32" y2="48" stroke="#85263E" strokeWidth="2.2" />
             <line x1="16" y1="24" x2="48" y2="24" stroke="#85263E" strokeWidth="2.2" />
-            <path d="M16 24 L11 36 L21 36 Z" fill="#B88622" />
-            <path d="M48 24 L43 36 L53 36 Z" fill="#B88622" />
+            <path d="M16 24 L11 36 L21 36 Z" fill="#8B741F" />
+            <path d="M48 24 L43 36 L53 36 Z" fill="#8B741F" />
           </g>
 
           <path d="M225 145 C212 85, 255 56, 308 58 C362 60, 392 108, 386 180 C380 238, 392 285, 378 335 L220 335 Z" fill="url(#hairAct2)" />
@@ -172,7 +172,7 @@ export default function JourneyActSceneIllustration({
           <path d="M305 62 C348 68, 374 104, 378 164 C382 218, 388 268, 394 304 C368 288, 356 248, 354 198 C352 148, 344 98, 305 74 Z" fill="url(#hairAct2)" />
 
           <g transform="translate(215, 282) rotate(-6)">
-            <rect x="0" y="0" width="165" height="110" rx="8" fill="#E8D2A6" stroke="#B88622" strokeWidth="2" />
+            <rect x="0" y="0" width="165" height="110" rx="8" fill="#E8D2A6" stroke="#8B741F" strokeWidth="2" />
             <rect x="10" y="10" width="145" height="90" rx="5" fill="#FFFDF8" />
             <rect x="24" y="24" width="95" height="14" rx="3" fill="#5C1828" />
             <text x="32" y="34" fill="#FAF0D7" fontSize="8" fontWeight="bold" fontFamily="serif">
@@ -222,7 +222,7 @@ export default function JourneyActSceneIllustration({
           <rect width="560" height="400" fill="url(#goldAura3)" />
 
           <circle cx="465" cy="95" r="52" fill="#FAF5E6" stroke="#DFC580" strokeWidth="2" opacity="0.7" />
-          <path d="M445 95 L460 110 L488 80" stroke="#B88622" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" opacity="0.75" />
+          <path d="M445 95 L460 110 L488 80" stroke="#8B741F" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" opacity="0.75" />
 
           <path d="M225 142 C212 82, 255 52, 308 55 C362 58, 392 105, 386 178 C380 235, 392 285, 378 335 L220 335 Z" fill="url(#hairAct3)" />
           <path d="M276 188 L273 242 L302 268 L330 242 L326 188 Z" fill="url(#skinAct3)" />
@@ -250,10 +250,10 @@ export default function JourneyActSceneIllustration({
             <rect x="0" y="0" width="185" height="106" rx="10" fill="url(#oabRed)" stroke="#E5C158" strokeWidth="3" />
             <rect x="8" y="8" width="169" height="90" rx="6" stroke="#E5C158" strokeWidth="1" strokeDasharray="4 2" />
             <circle cx="46" cy="53" r="22" fill="#7A1524" stroke="#E5C158" strokeWidth="2" />
-            <text x="46" y="57" textAnchor="middle" fill="#F5C768" fontSize="12" fontWeight="bold" fontFamily="serif">
+            <text x="46" y="57" textAnchor="middle" fill="#E8D285" fontSize="12" fontWeight="bold" fontFamily="serif">
               OAB
             </text>
-            <text x="82" y="42" fill="#F5C768" fontSize="10" fontWeight="bold" fontFamily="serif" letterSpacing="1">
+            <text x="82" y="42" fill="#E8D285" fontSize="10" fontWeight="bold" fontFamily="serif" letterSpacing="1">
               ORDEM DOS ADVOGADOS
             </text>
             <text x="82" y="58" fill="#FFFDF9" fontSize="9.5" fontWeight="bold" fontFamily="sans-serif">
@@ -283,7 +283,7 @@ export default function JourneyActSceneIllustration({
               <stop offset="100%" stopColor="#5C1E2E" />
             </linearGradient>
             <radialGradient id="uspGlow" cx="72%" cy="28%" r="55%">
-              <stop offset="0%" stopColor="#F5C768" stopOpacity="0.45" />
+              <stop offset="0%" stopColor="#E8D285" stopOpacity="0.45" />
               <stop offset="100%" stopColor="#421723" stopOpacity="0" />
             </radialGradient>
             <linearGradient id="skinAct4" x1="220" y1="80" x2="330" y2="250" gradientUnits="userSpaceOnUse">
@@ -307,7 +307,7 @@ export default function JourneyActSceneIllustration({
           <g transform="translate(405, 58)">
             <circle cx="52" cy="52" r="44" fill="#36111B" stroke="#E5C158" strokeWidth="2.5" />
             <circle cx="52" cy="52" r="37" stroke="#E5C158" strokeWidth="1" strokeDasharray="3 3" />
-            <text x="52" y="46" textAnchor="middle" fill="#F5C768" fontSize="13" fontWeight="bold" fontFamily="serif">
+            <text x="52" y="46" textAnchor="middle" fill="#E8D285" fontSize="13" fontWeight="bold" fontFamily="serif">
               ESPECIALIZACAO
             </text>
             <text x="52" y="63" textAnchor="middle" fill="#FAF0D7" fontSize="8.5" fontWeight="bold" fontFamily="sans-serif" letterSpacing="1">
@@ -333,7 +333,7 @@ export default function JourneyActSceneIllustration({
           <path d="M272 132 L269 156 C266 161, 276 162, 280 157" stroke="#B47650" strokeWidth="2.2" strokeLinecap="round" />
           <path d="M251 173 C265 182, 283 182, 296 172" stroke="#A95853" strokeWidth="3.5" strokeLinecap="round" />
 
-          <circle cx="328" cy="160" r="4" fill="#F5C768" />
+          <circle cx="328" cy="160" r="4" fill="#E8D285" />
 
           <path d="M280 58 C230 53, 192 86, 185 146 C178 200, 182 256, 198 306 C214 276, 218 226, 214 176 C210 130, 232 90, 280 72 Z" fill="url(#hairAct4)" />
           <path d="M275 60 C318 66, 344 102, 348 162 C352 216, 358 266, 364 302 C338 286, 326 246, 324 196 C322 146, 314 96, 275 72 Z" fill="url(#hairAct4)" />
@@ -393,7 +393,7 @@ export default function JourneyActSceneIllustration({
           <rect width="560" height="400" fill="url(#windowGlow5)" />
 
           <rect x="0" y="0" width="135" height="400" fill="#8C6D4F" opacity="0.45" />
-          <rect x="385" y="20" width="150" height="340" rx="6" fill="#FAF8F5" fillOpacity="0.7" stroke="#C5A059" strokeWidth="2" />
+          <rect x="385" y="20" width="150" height="340" rx="6" fill="#F6F3E8" fillOpacity="0.7" stroke="#C5A059" strokeWidth="2" />
           <rect x="405" y="160" width="24" height="190" fill="#D5C8B8" opacity="0.6" />
           <rect x="438" y="125" width="32" height="225" fill="#C9BAA7" opacity="0.6" />
           <rect x="478" y="145" width="28" height="205" fill="#D5C8B8" opacity="0.6" />
@@ -424,7 +424,7 @@ export default function JourneyActSceneIllustration({
 
           <g transform="translate(362, 285)">
             <rect x="0" y="0" width="168" height="68" rx="14" fill="#4A1220" stroke="#E5C158" strokeWidth="2" />
-            <text x="84" y="28" textAnchor="middle" fill="#F5C768" fontSize="13" fontWeight="bold" fontFamily="serif">
+            <text x="84" y="28" textAnchor="middle" fill="#E8D285" fontSize="13" fontWeight="bold" fontFamily="serif">
               +16 ANOS DE ATUAÇÃO
             </text>
             <text x="84" y="47" textAnchor="middle" fill="#FAF0D7" fontSize="8.5" fontWeight="bold" fontFamily="sans-serif" letterSpacing="0.8">
@@ -435,3 +435,4 @@ export default function JourneyActSceneIllustration({
       );
   }
 }
+

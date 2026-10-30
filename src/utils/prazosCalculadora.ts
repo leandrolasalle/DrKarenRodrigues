@@ -18,43 +18,43 @@ export interface DeadlineCalculationResult {
 }
 
 const FIXED_HOLIDAYS: Record<string, string> = {
-  '0-1': 'Confraternização Universal',
+  '0-1': 'Confraterniza??o Universal',
   '3-21': 'Tiradentes',
   '4-1': 'Dia Mundial do Trabalho',
-  '7-11': 'Dia do Advogado (Feriado da Justiça)',
-  '8-7': 'Independência do Brasil',
+  '7-11': 'Dia do Advogado (Feriado da Justi?a)',
+  '8-7': 'Independ?ncia do Brasil',
   '9-12': 'Nossa Senhora Aparecida',
-  '9-28': 'Dia do Servidor Público',
+  '9-28': 'Dia do Servidor P?blico',
   '10-2': 'Finados',
-  '10-15': 'Proclamação da República',
-  '10-20': 'Dia da Consciência Negra',
-  '11-8': 'Dia da Justiça (Lei 5.010/66)',
+  '10-15': 'Proclama??o da Rep?blica',
+  '10-20': 'Dia da Consci?ncia Negra',
+  '11-8': 'Dia da Justi?a (Lei 5.010/66)',
   '11-25': 'Natal',
 };
 
 const MOVABLE_HOLIDAY_OFFSETS: Record<number, string> = {
   [-48]: 'Segunda-feira de Carnaval',
-  [-47]: 'Terça-feira de Carnaval',
+  [-47]: 'Ter?a-feira de Carnaval',
   [-46]: 'Quarta-feira de Cinzas',
-  [-2]: 'Sexta-feira da Paixão',
+  [-2]: 'Sexta-feira da Paix?o',
   [60]: 'Corpus Christi',
 };
 
 const WEEKDAY_NAMES = [
   'Domingo',
   'Segunda-feira',
-  'Terça-feira',
+  'Ter?a-feira',
   'Quarta-feira',
   'Quinta-feira',
   'Sexta-feira',
-  'Sábado',
+  'S?bado',
 ] as const;
 
 const LEGAL_FOUNDATIONS = [
-  'Art. 219, Lei 13.105/2015 (CPC): Contagem exclusivamente em dias úteis.',
-  'Art. 220, CPC: Suspensão do prazo durante as férias forenses (20/dez a 20/jan).',
-  'Art. 224, §§ 2º e 3º, CPC: Publicação no primeiro dia útil pós-disponibilização no DJe e início no dia subsequente.',
-  'Art. 231, CPC: Critérios da citação e intimação eletrônica.',
+  'Art. 219, Lei 13.105/2015 (CPC): Contagem exclusivamente em dias ?teis.',
+  'Art. 220, CPC: Suspens?o do prazo durante as f?rias forenses (20/dez a 20/jan).',
+  'Art. 224, ?? 2? e 3?, CPC: Publica??o no primeiro dia ?til p?s-disponibiliza??o no DJe e in?cio no dia subsequente.',
+  'Art. 231, CPC: Crit?rios da cita??o e intima??o eletr?nica.',
 ];
 
 function isRecessoForense(date: Date): boolean {
@@ -82,7 +82,7 @@ function getEasterDate(year: number): Date {
 }
 
 function isFeriadoNacionalOuForense(date: Date): { isFeriado: boolean; nome?: string } {
-  // Férias forenses / Recesso Judiciário: 20 de dezembro a 20 de janeiro (art. 220 CPC)
+  // F?rias forenses / Recesso Judici?rio: 20 de dezembro a 20 de janeiro (art. 220 CPC)
   if (isRecessoForense(date)) {
     return { isFeriado: true, nome: 'Recesso Forense (Art. 220, CPC)' };
   }
@@ -104,7 +104,7 @@ function isFeriadoNacionalOuForense(date: Date): { isFeriado: boolean; nome?: st
 function isDiaUtil(date: Date): { util: boolean; motivo?: string } {
   const dayOfWeek = date.getDay();
   if (dayOfWeek === 0) return { util: false, motivo: 'Domingo (Fim de Semana)' };
-  if (dayOfWeek === 6) return { util: false, motivo: 'Sábado (Fim de Semana)' };
+  if (dayOfWeek === 6) return { util: false, motivo: 'S?bado (Fim de Semana)' };
 
   const feriado = isFeriadoNacionalOuForense(date);
   if (feriado.isFeriado) {
@@ -132,13 +132,13 @@ export function calcularPrazoProcessual(
   const [ano, mes, dia] = dataDisponibilizacaoStr.split('-').map(Number);
   const dataDisp = new Date(ano, (mes || 1) - 1, dia || 1);
 
-  // 1. Data de Publicação (DJe) - Art. 224, § 2º CPC
+  // 1. Data de Publica??o (DJe) - Art. 224, ? 2? CPC
   const dataPub = isDjeEletronico ? getProximoDiaUtil(dataDisp) : new Date(dataDisp);
 
-  // 2. Data de Início da Contagem - Art. 224, § 3º CPC
+  // 2. Data de In?cio da Contagem - Art. 224, ? 3? CPC
   const dataInicio = getProximoDiaUtil(dataPub);
 
-  // 3. Contagem dos dias úteis
+  // 3. Contagem dos dias ?teis
   const diasComputados: DeadlineCalculationResult['diasComputados'] = [];
   const diasIgnorados: DeadlineCalculationResult['diasIgnorados'] = [];
 
@@ -162,7 +162,7 @@ export function calcularPrazoProcessual(
     } else {
       diasIgnorados.push({
         data: new Date(cursor),
-        motivo: status.motivo || 'Dia não útil',
+        motivo: status.motivo || 'Dia n?o ?til',
       });
     }
     cursor.setDate(cursor.getDate() + 1);

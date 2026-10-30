@@ -14,32 +14,32 @@ export interface TriageSubmission {
 
 export function classifyTriagePriority(urgency: string, clientType: string): string {
   if (urgency.includes('Urgente')) {
-    return '🚨 PRIORIDADE ALTA (PRAZO / INTIMAÇÃO)';
+    return '?? PRIORIDADE ALTA (PRAZO / INTIMA??O)';
   }
   if (clientType.includes('Empresa')) {
-    return '🏢 CLIENTE EMPRESARIAL (PJ)';
+    return '?? CLIENTE EMPRESARIAL (PJ)';
   }
-  return '💬 ORIENTAÇÃO / PLANEJAMENTO';
+  return '?? ORIENTA??O / PLANEJAMENTO';
 }
 
 export function buildWhatsAppTriageUrl(data: TriageSubmission): string {
   const priorityTag = classifyTriagePriority(data.urgency, data.clientType);
 
   const lines = [
-    `📋 *TRIAGEM DE CONSULTA — DRA. KAREN RODRIGUES*`,
-    `🏷️ *Classificação:* ${priorityTag}`,
-    `──────────────────────`,
-    `👤 *Cliente:* ${data.name.trim()}`,
-    `📱 *WhatsApp:* ${data.phone.trim()}`,
-    `👥 *Perfil:* ${data.clientType}`,
-    `⚖️ *Área:* ${data.area}`,
-    `📌 *Situação Atual:* ${data.situation}`,
-    `⏳ *Urgência:* ${data.urgency}`,
-    `📂 *Documentos:* ${data.docsStatus}`,
-    data.format ? `📍 *Preferência:* ${data.format}` : null,
-    data.details?.trim() ? `📝 *Resumo:* ${data.details.trim()}` : null,
-    `──────────────────────`,
-    `Olá, Dra. Karen! Preenchi a triagem no site e gostaria de agendar minha consulta.`,
+    `?? *TRIAGEM DE CONSULTA - DRA. KAREN RODRIGUES*`,
+    `??? *Classifica??o:* ${priorityTag}`,
+    `??????????????????????`,
+    `?? *Cliente:* ${data.name.trim()}`,
+    `?? *WhatsApp:* ${data.phone.trim()}`,
+    `?? *Perfil:* ${data.clientType}`,
+    `?? *?rea:* ${data.area}`,
+    `?? *Situa??o Atual:* ${data.situation}`,
+    `? *Urg?ncia:* ${data.urgency}`,
+    `?? *Documentos:* ${data.docsStatus}`,
+    data.format ? `?? *Prefer?ncia:* ${data.format}` : null,
+    data.details?.trim() ? `?? *Resumo:* ${data.details.trim()}` : null,
+    `??????????????????????`,
+    `Ol?, Dra. Karen! Preenchi a triagem no site e gostaria de agendar minha consulta.`,
   ]
     .filter(Boolean)
     .join('\n');

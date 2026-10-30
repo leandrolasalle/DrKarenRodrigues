@@ -13,42 +13,36 @@
   --font-sans: var(--font-body);
   --font-script: var(--font-signature);
 
-  /* Marsala Sophisticated Palette */
-  --color-marsala-950: #2D0B14;
-  --color-marsala-900: #4A1220;
-  --color-marsala-850: #5C1828;
-  --color-marsala-800: #6E1E32;
-  --color-marsala-700: #85263E;
-  --color-marsala-600: #9E344F;
-  --color-marsala-500: #B84A66;
-  --color-marsala-400: #CF7088;
-  --color-marsala-300: #E29BAE;
-  --color-marsala-200: #F0C6D1;
-  --color-marsala-100: #F9EAEF;
-  --color-marsala-50: #FDF7F8;
+  /* Brand palette: burgundy, muted sage, and warm gold */
+  --color-brand-950: #2B0503;
+  --color-brand-900: #590907;
+  --color-brand-800: #3E0605;
+  --color-brand-100: #F7E5E3;
+  --color-brand-50: #FCF5F4;
+  --color-sage: #A5A79B;
+  --color-gold: #E8D285;
 
-  /* Dourado Nobre / Brushed Gold Palette */
   --color-gold-50: #FAF7EC;
-  --color-gold-100: #F4ECCD;
-  --color-gold-200: #E8D89B;
-  --color-gold-300: #DDC369;
-  --color-gold-400: #D1AE3E;
-  --color-gold-500: #B8922A;
-  --color-gold-600: #94711D;
-  --color-gold-700: #715315;
-  --color-gold-800: #50390E;
-  --color-gold-900: #332308;
+  --color-gold-100: #F7EBC0;
+  --color-gold-200: #E8D285;
+  --color-gold-300: #D8BD67;
+  --color-gold-400: #C5A545;
+  --color-gold-500: #A8892B;
+  --color-gold-600: #856B1E;
+  --color-gold-700: #624D15;
+  --color-gold-800: #45350D;
+  --color-gold-900: #2C2108;
 }
 
 body {
   font-family: var(--font-body);
-  background-color: #FAF8F5;
-  color: #18181B;
+  background-color: #F6F3E8;
+  color: #241211;
 }
 
 select option {
   background-color: #FFFFFF;
-  color: #18181B;
+  color: #241211;
 }
 
 html {
@@ -64,12 +58,12 @@ html {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F3F0EB;
+  background: #D9D8CE;
 }
 ::-webkit-scrollbar-thumb {
-  background: #BBAE9E;
+  background: #A5A79B;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #6E1A2B;
+  background: #3E0605;
 }

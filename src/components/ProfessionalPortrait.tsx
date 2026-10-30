@@ -52,7 +52,7 @@ export default function ProfessionalPortrait({
             className="h-full w-full object-cover object-[center_24%]"
           />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#2A0D15]/80 via-[#2A0D15]/20 to-transparent px-5 pb-5 pt-16 text-white">
-            <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#F5C768]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#E8D285]">
               OAB/RJ 265.765 · Família &amp; Previdenciário
             </p>
             <p className="mt-1 font-serif text-xl font-semibold">Dra. Karen Rodrigues</p>
@@ -97,3 +97,4 @@ export default function ProfessionalPortrait({
     </div>
   );
 }
+

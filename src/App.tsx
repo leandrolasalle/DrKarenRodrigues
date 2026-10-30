@@ -15,7 +15,7 @@ export default function App() {
   const site = useSiteController();
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5] text-[#18181B] flex flex-col font-sans selection:bg-[#5B1422] selection:text-white">
+    <div className="min-h-screen bg-[#F6F3E8] text-[#18181B] flex flex-col font-sans selection:bg-[#590907] selection:text-white">
       {/* Floating Pill Navbar */}
       <Header
         currentPage={site.currentPage}
@@ -84,3 +84,4 @@ export default function App() {
     </div>
   );
 }
+

@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function HowItWorks() {
   return (
-    <section id="como-funciona" className="bg-[#FAF8F5] py-16 text-[#18181B] sm:py-20">
+    <section id="como-funciona" className="bg-[#F6F3E8] py-16 text-[#18181B] sm:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="mb-10 grid gap-4 sm:mb-12 sm:grid-cols-2 sm:items-end">
           <div>
@@ -24,7 +24,7 @@ export default function HowItWorks() {
           {HOW_IT_WORKS_STEPS.map((step, index) => (
             <article key={step.step} className="border-t border-black/[0.07] py-5">
               <div className="mb-6 flex items-center justify-between">
-                <span className="font-cinzel text-4xl font-medium leading-none text-[#5B1422]">
+                <span className="font-cinzel text-4xl font-medium leading-none text-[#590907]">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="text-[9px] font-medium uppercase tracking-[0.16em] text-[#71717A]">
@@ -49,7 +49,7 @@ export default function HowItWorks() {
             href={OFFICE_CONTACTS.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-[#5B1422] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#6E1A2B] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5B1422]"
+            className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-[#590907] px-6 text-sm font-semibold text-white transition-colors hover:bg-[#3E0605] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#590907]"
           >
             <MessageCircle className="h-4 w-4 text-white/80" />
             <span>Iniciar conversa no WhatsApp</span>
@@ -59,3 +59,4 @@ export default function HowItWorks() {
     </section>
   );
 }
+

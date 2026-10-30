@@ -50,11 +50,11 @@ export default function QuickContactSection() {
   };
 
   return (
-    <section id="contato" className="border-t border-black/[0.05] bg-[#FAF8F5] py-16 text-[#18181B] sm:py-20">
+    <section id="contato" className="border-t border-black/[0.05] bg-[#F6F3E8] py-16 text-[#18181B] sm:py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="mb-3 inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[#71717A] sm:text-xs">
-            <CalendarCheck className="h-3.5 w-3.5 text-[#5B1422]" />
+            <CalendarCheck className="h-3.5 w-3.5 text-[#590907]" />
             <span>Agendamento com Triagem Inteligente</span>
           </span>
           <h2 className="font-cinzel text-2xl font-medium tracking-tight text-[#18181B] sm:text-3xl">
@@ -77,8 +77,8 @@ export default function QuickContactSection() {
                   Selecione as opções que melhor descrevem sua necessidade:
                 </p>
               </div>
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#5B1422]">
-                <Sparkles className="h-3.5 w-3.5 text-[#5B1422]" />
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#590907]">
+                <Sparkles className="h-3.5 w-3.5 text-[#590907]" />
                 <span>{profileClassification}</span>
               </span>
             </div>
@@ -96,11 +96,11 @@ export default function QuickContactSection() {
                     aria-pressed={clientType === 'Para Mim / Família (PF)'}
                     className={`flex min-h-11 items-center gap-2.5 rounded-lg border px-3 py-2.5 text-left text-xs font-medium transition-all cursor-pointer ${
                       clientType === 'Para Mim / Família (PF)'
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <User className="w-4 h-4 text-[#5B1422] shrink-0" />
+                    <User className="w-4 h-4 text-[#590907] shrink-0" />
                     <span>Para Mim / Família</span>
                   </button>
 
@@ -110,11 +110,11 @@ export default function QuickContactSection() {
                     aria-pressed={clientType === 'Para Empresa (PJ)'}
                     className={`flex min-h-11 items-center gap-2.5 rounded-lg border px-3 py-2.5 text-left text-xs font-medium transition-all cursor-pointer ${
                       clientType === 'Para Empresa (PJ)'
-                        ? 'border-[#B88622]/70 bg-[#FBF6E9] text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                        ? 'border-[#8B741F]/70 bg-[#FBF6E9] text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                        : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                     }`}
                   >
-                    <Building2 className="w-4 h-4 text-[#5B1422] shrink-0" />
+                    <Building2 className="w-4 h-4 text-[#590907] shrink-0" />
                     <span>Para Minha Empresa</span>
                   </button>
                 </div>
@@ -134,12 +134,12 @@ export default function QuickContactSection() {
                       aria-pressed={area === item}
                       className={`flex min-h-10 items-center justify-between rounded-lg border px-3.5 py-2.5 text-left text-xs transition-all cursor-pointer ${
                         area === item
-                          ? 'border-[#B88622]/70 bg-[#FBF6E9] font-semibold text-[#5B1422] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
-                          : 'border-black/[0.07] bg-white font-medium text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                          ? 'border-[#8B741F]/70 bg-[#FBF6E9] font-semibold text-[#590907] shadow-[0_0_0_1px_rgba(184,146,42,0.16),0_6px_18px_rgba(184,146,42,0.18)]'
+                          : 'border-black/[0.07] bg-white font-medium text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                       }`}
                     >
                       <span className="truncate">{item}</span>
-                      {area === item && <CheckCircle2 className="w-3.5 h-3.5 text-[#5B1422] shrink-0" />}
+                      {area === item && <CheckCircle2 className="w-3.5 h-3.5 text-[#590907] shrink-0" />}
                     </button>
                   ))}
                 </div>
@@ -163,8 +163,8 @@ export default function QuickContactSection() {
                       aria-pressed={situation === sit}
                       className={`min-h-10 rounded-lg border px-3 py-2.5 text-center text-xs font-medium transition-all cursor-pointer ${
                         situation === sit
-                          ? 'border-[#5B1422] bg-[#5B1422] font-semibold text-white shadow-[0_0_0_1px_rgba(184,146,42,0.7),0_7px_20px_rgba(184,146,42,0.24)]'
-                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#B88622]/40 hover:bg-[#FAF8F5] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
+                          ? 'border-[#590907] bg-[#590907] font-semibold text-white shadow-[0_0_0_1px_rgba(184,146,42,0.7),0_7px_20px_rgba(184,146,42,0.24)]'
+                          : 'border-black/[0.07] bg-white text-[#52525B] hover:border-[#8B741F]/40 hover:bg-[#F6F3E8] hover:shadow-[0_5px_16px_rgba(184,146,42,0.11)]'
                       }`}
                     >
                       {sit}
@@ -182,7 +182,7 @@ export default function QuickContactSection() {
                   <select
                     value={urgency}
                     onChange={(e) => setUrgency(e.target.value)}
-                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-xs text-[#18181B] outline-none transition-colors focus:border-[#5B1422]/50"
+                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-xs text-[#18181B] outline-none transition-colors focus:border-[#590907]/50"
                   >
                     <option value="Urgente (Recebi intimação ou prazo correndo)">
                       🚨 Urgente (Intimação / Prazo correndo)
@@ -203,7 +203,7 @@ export default function QuickContactSection() {
                   <select
                     value={hasDocs}
                     onChange={(e) => setHasDocs(e.target.value)}
-                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-xs text-[#18181B] outline-none transition-colors focus:border-[#5B1422]/50"
+                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-xs text-[#18181B] outline-none transition-colors focus:border-[#590907]/50"
                   >
                     <option value="Sim, já tenho documentos ou nº do processo">
                       📂 Sim, já tenho documentos / nº processo
@@ -227,7 +227,7 @@ export default function QuickContactSection() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Seu nome completo"
-                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#5B1422]/50"
+                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#590907]/50"
                   />
                 </div>
 
@@ -241,7 +241,7 @@ export default function QuickContactSection() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="(DDD) 99999-9999"
-                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#5B1422]/50"
+                    className="min-h-11 w-full rounded-lg border border-black/[0.07] bg-white px-3.5 py-2.5 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#590907]/50"
                   />
                 </div>
               </div>
@@ -255,13 +255,13 @@ export default function QuickContactSection() {
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder="Ex: Prefiro atendimento na parte da tarde..."
-                  className="w-full resize-none rounded-lg border border-black/[0.07] bg-white p-3.5 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#5B1422]/50"
+                  className="w-full resize-none rounded-lg border border-black/[0.07] bg-white p-3.5 text-sm text-[#18181B] placeholder:text-[#A1A1AA] outline-none transition-colors focus:border-[#590907]/50"
                 />
               </div>
 
               <button
                 type="submit"
-                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#5B1422] py-3.5 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(91,20,34,0.14)] transition-colors duration-200 hover:bg-[#6E1A2B] active:scale-[0.99] cursor-pointer"
+                className="flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#590907] py-3.5 text-sm font-semibold text-white shadow-[0_4px_20px_rgba(91,20,34,0.14)] transition-colors duration-200 hover:bg-[#3E0605] active:scale-[0.99] cursor-pointer"
               >
                 {sent ? (
                   <>
@@ -286,7 +286,7 @@ export default function QuickContactSection() {
           <aside className="space-y-8 lg:col-span-5">
             <div className="space-y-3 border-t border-black/[0.06] py-5">
               <div className="flex items-center gap-2">
-                <AlertTriangle className="h-4 w-4 text-[#5B1422]" />
+                <AlertTriangle className="h-4 w-4 text-[#590907]" />
                 <h4 className="text-xs font-semibold uppercase tracking-wider text-[#18181B]">
                   Por que fazemos essa triagem rápida?
                 </h4>
@@ -308,32 +308,32 @@ export default function QuickContactSection() {
                   href={OFFICE_CONTACTS.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 font-semibold text-[#5B1422] hover:underline"
+                  className="flex items-center gap-3 font-semibold text-[#590907] hover:underline"
                 >
                   <MessageCircle className="h-4 w-4 shrink-0" />
                   WhatsApp: {OFFICE_CONTACTS.phone}
                 </a>
                 <a
                   href={`tel:+${OFFICE_CONTACTS.messagesPhoneRaw}`}
-                  className="flex items-center gap-3 text-[#52525B] hover:text-[#5B1422]"
+                  className="flex items-center gap-3 text-[#52525B] hover:text-[#590907]"
                 >
-                  <Phone className="h-4 w-4 shrink-0 text-[#5B1422]" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#590907]" />
                   Recados com Andréia: {OFFICE_CONTACTS.messagesPhone}
                 </a>
                 <a
                   href={`mailto:${OFFICE_CONTACTS.email}`}
-                  className="flex items-center gap-3 break-all text-[#52525B] hover:text-[#5B1422]"
+                  className="flex items-center gap-3 break-all text-[#52525B] hover:text-[#590907]"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-[#5B1422]" />
+                  <Mail className="h-4 w-4 shrink-0 text-[#590907]" />
                   {OFFICE_CONTACTS.email}
                 </a>
                 <a
                   href={OFFICE_CONTACTS.linkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-[#52525B] hover:text-[#5B1422]"
+                  className="flex items-center gap-3 text-[#52525B] hover:text-[#590907]"
                 >
-                  <Linkedin className="h-4 w-4 shrink-0 text-[#5B1422]" />
+                  <Linkedin className="h-4 w-4 shrink-0 text-[#590907]" />
                   Perfil profissional no LinkedIn
                 </a>
               </div>
@@ -344,3 +344,4 @@ export default function QuickContactSection() {
     </section>
   );
 }
+
