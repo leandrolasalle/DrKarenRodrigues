@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import contactPortrait from '../../watermarked_img_16837427052121350212.jpg';
 import { OFFICE_CONTACTS, SERVICE_TITLES } from '../models/legalData';
 import { classifyTriagePriority, sendTriageToWhatsApp } from '../utils/triage';
 import {
@@ -9,12 +10,14 @@ import {
   AlertTriangle,
   CalendarCheck,
   Sparkles,
-  Phone,
   Mail,
   Linkedin,
+  Instagram,
+  X,
 } from 'lucide-react';
 
 export default function QuickContactSection() {
+  const [securityBannerVisible, setSecurityBannerVisible] = useState(true);
   const [clientType, setClientType] = useState<'Para Mim / Família (PF)' | 'Para Empresa (PJ)'>(
     'Para Mim / Família (PF)'
   );
@@ -50,7 +53,8 @@ export default function QuickContactSection() {
   };
 
   return (
-    <section id="contato" className="border-t border-black/[0.05] bg-[#F6F3E8] py-16 text-[#18181B] sm:py-20">
+    <>
+    <section id="contato" className="border-t border-black/[0.05] bg-[#F6F3E8] pb-32 pt-16 text-[#18181B] sm:pb-36 sm:pt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="mb-3 inline-flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[#71717A] sm:text-xs">
@@ -150,11 +154,12 @@ export default function QuickContactSection() {
                 <label className="mb-3 block text-[10px] font-semibold uppercase tracking-[0.16em] text-[#71717A]">
                   3. Em que momento está o caso?
                 </label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
                   {[
                     'Quero dar entrada / resolver agora',
-                    'Já tenho processo na Justiça',
+                    'Já tenho processo em andamento',
                     'Analisar contrato ou acordo',
+                    'Consultoria Extrajudicial',
                   ].map((sit) => (
                     <button
                       key={sit}
@@ -284,6 +289,14 @@ export default function QuickContactSection() {
 
           {/* Locations & Info + Why Triage Helps (5 cols) */}
           <aside className="space-y-8 lg:col-span-5">
+            <figure className="overflow-hidden rounded-2xl bg-white shadow-[0_4px_25px_rgba(0,0,0,0.06)]">
+              <img
+                src={contactPortrait}
+                alt="Dra. Karen Rodrigues"
+                className="h-64 w-full object-cover object-center sm:h-80"
+              />
+            </figure>
+
             <div className="space-y-3 border-t border-black/[0.06] py-5">
               <div className="flex items-center gap-2">
                 <AlertTriangle className="h-4 w-4 text-[#590907]" />
@@ -314,13 +327,6 @@ export default function QuickContactSection() {
                   WhatsApp: {OFFICE_CONTACTS.phone}
                 </a>
                 <a
-                  href={`tel:+${OFFICE_CONTACTS.messagesPhoneRaw}`}
-                  className="flex items-center gap-3 text-[#52525B] hover:text-[#590907]"
-                >
-                  <Phone className="h-4 w-4 shrink-0 text-[#590907]" />
-                  Recados com Andréia: {OFFICE_CONTACTS.messagesPhone}
-                </a>
-                <a
                   href={`mailto:${OFFICE_CONTACTS.email}`}
                   className="flex items-center gap-3 break-all text-[#52525B] hover:text-[#590907]"
                 >
@@ -336,12 +342,45 @@ export default function QuickContactSection() {
                   <Linkedin className="h-4 w-4 shrink-0 text-[#590907]" />
                   Perfil profissional no LinkedIn
                 </a>
+                <a
+                  href={OFFICE_CONTACTS.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[#52525B] hover:text-[#590907]"
+                >
+                  <Instagram className="h-4 w-4 shrink-0 text-[#590907]" />
+                  Perfil profissional no Instagram
+                </a>
               </div>
             </div>
           </aside>
         </div>
       </div>
     </section>
+    {securityBannerVisible && (
+      <aside
+        role="alert"
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-[#E8D285]/40 bg-[#590907] px-4 py-3 text-white shadow-[0_-4px_20px_rgba(0,0,0,0.16)] sm:px-6"
+      >
+        <div className="mx-auto flex max-w-6xl items-start gap-3 pr-8 text-xs leading-5 sm:items-center sm:text-sm">
+          <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-[#E8D285] sm:mt-0" />
+          <p>
+            <strong>Aviso de Segurança:</strong> <strong>NUNCA</strong> solicitamos transferências
+            via PIX para pagamentos de honorários, custas ou liberação de alvarás por WhatsApp sem
+            uma reunião prévia (presencial ou por vídeo). Caso receba mensagens suspeitas em nome da
+            Dra. Karen Rodrigues, denuncie.
+          </p>
+          <button
+            type="button"
+            onClick={() => setSecurityBannerVisible(false)}
+            aria-label="Fechar aviso de segurança"
+            className="absolute right-4 top-3 rounded-full p-1 text-white/80 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#E8D285] sm:right-6 sm:top-1/2 sm:-translate-y-1/2"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      </aside>
+    )}
+    </>
   );
 }
-

@@ -51,28 +51,12 @@ export const SIMPLE_SERVICES: SimpleService[] = [
     whatsappMsg: 'Olá, Dra. Karen! Gostaria de agendar uma consulta sobre Direito de Família.',
   },
   {
-    id: 'inventario',
-    title: 'Inventário, Herança & Bens',
-    shortDesc: 'Inventário em cartório ou judicial, regularização de herança, testamentos e desbloqueio de bens.',
-    tag: 'Patrimônio',
-    icon: 'Sparkles',
-    whatsappMsg: 'Olá, Dra. Karen! Gostaria de orientação sobre Inventário e Herança.',
-  },
-  {
     id: 'contratos',
     title: 'Contratos & Imóveis',
     shortDesc: 'Análise antes de assinar contratos de compra, venda, aluguel ou distrato imobiliário.',
     tag: 'Segurança',
     icon: 'FileCheck',
     whatsappMsg: 'Olá, Dra. Karen! Gostaria de analisar um contrato/imóvel com segurança.',
-  },
-  {
-    id: 'trabalhista',
-    title: 'Direito Trabalhista',
-    shortDesc: 'Defesa de direitos, rescisões, horas extras e acordos preventivos para pessoas e empresas.',
-    tag: 'Prevenção',
-    icon: 'Briefcase',
-    whatsappMsg: 'Olá, Dra. Karen! Preciso de orientação sobre um caso trabalhista.',
   },
   {
     id: 'empresas',
@@ -158,7 +142,7 @@ export const HERO_JOURNEY_ACTS: HeroAct[] = [
     stageTitle: 'Pós-graduação em Família, Sucessões e Previdenciário',
     headline: 'Formação especializada para lidar com questões que mudam vidas',
     story:
-      'Aperfeiçoei minha formação com pós-graduação lato sensu em Direito de Família e Sucessões e Direito Previdenciário pela Faculdade Líbano, com carga horária de 720 horas. Desde então, mantenho meus estudos atualizados em temas jurídicos e na prática profissional.',
+      'Aperfeiçoei minha formação por meio de pós-graduação lato sensu em Direito de Família e Sucessões e em Direito Previdenciário, pela Faculdade Líbano. Desde então, mantenho constante aprimoramento dos meus conhecimentos jurídicos e da minha prática profissional.',
     photoCaption: 'Pós-graduação e atualização jurídica',
   },
   {
@@ -217,7 +201,7 @@ export const SITE_METADATA = {
     'https://ais-pre-52eaue4tcyndq325etrcct-89955689891.us-east1.run.app',
   ogImagePath: '/images+15anos-removebg-preview.png',
   whatsappShareMessage: (publicUrl: string) =>
-    `Olá! Confira o site oficial da Dra. Karen Rodrigues | Advocacia & Consultoria Jurídica (OAB/RJ 265.765):\n\n${publicUrl}`,
+    `Olá! Confira o site oficial da Dra. Karen Rodrigues | Consultoria Jurídica Especializada (OAB/RJ 265.765):\n\n${publicUrl}`,
 };
 
 export const OFFICE_CONTACTS = {
@@ -229,6 +213,7 @@ export const OFFICE_CONTACTS = {
   messagesPhoneRaw: '5521995690638',
   email: 'drakarenrodrigues.adv.42@gmail.com',
   linkedIn: 'https://www.linkedin.com/in/karenrodrigues-34059979/',
+  instagram: 'https://www.instagram.com/advkarenrodrigues?cplk=djdpY2U1ajQwY3Vp',
   publicUrl: SITE_METADATA.fallbackPublicUrl,
 };
 
@@ -282,4 +267,3 @@ export function openExternalUrl(url: string): void {
   anchor.click();
   document.body.removeChild(anchor);
 }
-

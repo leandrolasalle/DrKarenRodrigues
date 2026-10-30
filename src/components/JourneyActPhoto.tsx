@@ -1,4 +1,4 @@
-import karenPortrait from '../../watermarked_img_8812102882735486581.jpg';
+import karenPortrait from '../../watermarked_img_16837427052121350212.jpg';
 
 interface JourneyActPhotoProps {
   actIndex: number;

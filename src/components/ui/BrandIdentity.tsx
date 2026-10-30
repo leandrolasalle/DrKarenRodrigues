@@ -37,11 +37,10 @@ export default function BrandIdentity({
 
         {showSubtitle && (
           <span className="whitespace-nowrap text-[9px] font-medium uppercase tracking-[0.16em] text-[#71717A] sm:text-[10px]">
-            Advocacia & Consultoria
+            Consultoria Jurídica Especializada
           </span>
         )}
       </div>
     </button>
   );
 }
-

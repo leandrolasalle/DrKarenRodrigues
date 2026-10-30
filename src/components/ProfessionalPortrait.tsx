@@ -1,4 +1,4 @@
-import karenPortrait from '../../watermarked_img_8812102882735486581.jpg';
+import karenPortrait from '../../watermarked_img_16837427052121350212.jpg';
 import experienceBadge from '../../images+15anos-removebg-preview.png';
 
 interface ProfessionalPortraitProps {
@@ -97,4 +97,3 @@ export default function ProfessionalPortrait({
     </div>
   );
 }
-

@@ -87,7 +87,7 @@ export default function Hero({ onOpenConsultation, onOpenJourneyPage }: HeroProp
                 <p className="mt-1 font-cinzel text-xl font-medium text-white">
                   Karen Rodrigues
                 </p>
-                <p className="mt-1 text-xs text-white/85">Advocacia & Consultoria Jurídica</p>
+                <p className="mt-1 text-xs text-white/85">Consultoria Jurídica Especializada</p>
               </div>
             </div>
           </div>
@@ -103,4 +103,3 @@ export default function Hero({ onOpenConsultation, onOpenJourneyPage }: HeroProp
     </section>
   );
 }
-

@@ -2,6 +2,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import HowItWorks from './components/HowItWorks';
+import FaqSection from './components/FaqSection';
 import AboutSection from './components/AboutSection';
 import JourneyLandingPage from './components/JourneyLandingPage';
 import QuickContactSection from './components/QuickContactSection';
@@ -49,6 +50,8 @@ export default function App() {
             {/* Teaser Card on Home to Open Dedicated "Sobre Mim · Minha Jornada" Landing Page */}
             <AboutSection onOpenJourneyPage={() => site.navigatePage('sobre')} />
 
+            <FaqSection />
+
             {/* Interactive Client Triage & Offices */}
             <QuickContactSection />
           </>
@@ -84,4 +87,3 @@ export default function App() {
     </div>
   );
 }
-
